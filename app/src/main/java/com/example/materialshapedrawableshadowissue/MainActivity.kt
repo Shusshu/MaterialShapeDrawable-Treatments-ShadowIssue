@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
         val cornerHeight = resources.dp2Px(16f)
 
         val shapePathModel = ShapeAppearanceModel().apply {
-            topLeftCorner = QuadCornerTreatment(cornerWidth, cornerHeight)
-            topRightCorner = QuadCornerTreatment(cornerWidth, cornerHeight, true)
+            topLeftCorner = ArcCornerTreatment(cornerWidth, cornerHeight)
+            topRightCorner = ArcCornerTreatment(cornerWidth, cornerHeight, true)
             val topTreatment = BottomAppBarTopEdgeTreatment(fabMargin, roundCornerRadius, cradleVerticalOffset)
             topTreatment.fabDiameter = fabWidth
             topEdge = topTreatment
